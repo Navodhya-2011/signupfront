@@ -14,7 +14,6 @@ router.post ('/signup', (request, response) => {
         mobile:request.body.mobile,
         status:request.body.status,
         password:request.body.password,
-        accountType:request.body.accountType
     })
     signedUpUser.save()
     .then(data =>{
