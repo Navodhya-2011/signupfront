@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const signUpTemplate = new mongoose.Schema({
+const Student = new mongoose.Schema({
     id: {
         type: String,
         required: true,
@@ -41,10 +41,10 @@ const signUpTemplate = new mongoose.Schema({
         required: true,
     },
 
-    accountType: {
-        type: String,
-        required: true,
+    isStudent: {
+        type: Boolean,
+        default: true,
     },
 })
 
-module.exports = mongoose.model('mytable', signUpTemplate)
+module.exports = mongoose.model('mytable', Student)
